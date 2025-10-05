@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaushik Pathak</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-portfolio-bg overflow-x-hidden">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-portfolio-bg-90 backdrop-blur-sm w-full">
+            <div class="w-full max-w-screen-lg mx-auto px-4 sm-px-6">
+                <div class="flex justify-between items-center h-16 md-h-20">
+                    <div class="text-xl md-text-2xl font-outfit font-black">KP.</div>
+                    <div class="hidden md-flex items-center gap-4 lg-gap-6">
+                        <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+                        <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                        <button onclick="scrollToSection('skills')" class="nav-link">Skills</button>
+                        <button onclick="scrollToSection('projects')" class="nav-link">Project</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="pt-32 pb-16 md-pt-40 md-pb-24">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8">
+                <div class="grid grid-cols-1 lg-grid-cols-2 gap-8 lg-gap-16 items-center">
+                    <div class="order-2 lg-order-1 space-y-6 lg-space-y-8">
+                        <div class="space-y-4">
+                            <h1 class="text-3xl sm-text-4xl lg-text-5xl font-outfit font-extrabold leading-tight">
+                                <span class="text-portfolio-green-dark">Hi </span>
+                                <span class="text-black">there</span>
+                                <br>
+                                <span class="text-portfolio-green-dark">I'm </span>
+                                <span class="text-portfolio-dark" id="typing-first"></span>
+                                <span class="text-portfolio-green-dark" id="typing-last"></span>
+                            </h1>
+                            <p class="text-lg lg-text-xl text-portfolio-green-dark font-inter italic">
+                                Problem Solver, Collaborative. Always learning
+                            </p>
+                        </div>
+                        <p class="text-sm sm-text-base font-inter font-semibold leading-relaxed">
+                            I'm a collaborative problem-solver with a passion for creating
+                            smart solutions. From contributing to workflow automation to
+                            designing applications, I enjoy building tools that simplify
+                            processes, boost efficiency, and make everyday tasks faster and
+                            easier.
+                        </p>
+                        <div class="flex flex-col sm-flex-row items-start sm-items-center gap-4 lg-gap-8">
+                            <button class="btn-primary" onclick="window.open('src/PDF/Kaushik_V0825.pdf', '_blank')">Download Resume</button>
+                            <button class="btn-secondary">Say Hi K!</button>
+                        </div>
+                        <div class="flex items-center items-center-tabmobile gap-4">
+                            <a href="#" class="social-link">
+                                <img src="src/icons/github.png" alt="GitHub" class="w-10 h-10 sm-w-12 sm-h-12 rounded-full object-cover">
+                            </a>
+                            <a href="#" class="social-link">
+                                <img src="src/icons/linkedin.png" alt="LinkedIn" class="w-10 h-10 sm-w-12 sm-h-12 rounded-full object-cover">
+                            </a>
+                            <a href="#" class="social-link">
+                                <img src="src/icons/email.png" alt="Email" class="w-10 h-10 sm-w-12 sm-h-12 rounded-full object-cover">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-1 lg-order-2 flex justify-center">
+                        <div class="relative w-64 h-64 sm-w-80 sm-h-80 lg-w-96 lg-h-96 flex items-center justify-center">
+                            <img src="src/images/Kaushik hero pic.png" alt="Profile image"
+                                style="border-radius: 50%; background: #22c55e; object-fit: cover; width: 100%; height: 100%; border: 1px solid #22c55e; transition: background 0.3s, border-color 0.3s, border-width 0.3s; cursor: pointer;"
+                                onmouseover="this.style.background='#d1d5db';this.style.borderColor='#d1d5db';this.style.borderWidth='0px';"
+                                onmouseout="this.style.background='#22c55e';this.style.borderColor='#22c55e';this.style.borderWidth='0px';"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logos Section -->
+        <section class="py-12 md-py-16">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8">
+                <div class="flex flex-wrap justify-center items-center gap-8 md-gap-12 opacity-60">
+                    <img src="src/images/leetcode.png" alt="LeetCode" class="h-12 md-h-16 mix-blend-luminosity img-hover-scale">
+                    <img src="src/images/Python 5 Star.png" alt="5 Star Python" class="h-16 md-h-20 mix-blend-luminosity">
+                    <img src="src/images/SQL 5 Star.png" alt="5 Star SQL" class="h-16 md-h-24 mix-blend-luminosity">
+                    <img src="src/images/C++ 5 Star.png" alt="5 Star CPP" class="h-12 md-h-16 mix-blend-luminosity">
+                    <img src="src/images/HackerRank.png" alt="HackerRank" class="h-12 md-h-16 mix-blend-luminosity">
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="py-12 md-py-16 bg-portfolio-green">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8">
+                <div class="flex justify-center">
+                    <div class="video-container shadow-video">
+                        <iframe 
+                            src="https://www.youtube.com/embed/2JM2slobJUo?si=oZmBWcbLqFPm6KKi" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <!-- <div class="w-full max-w-4xl">
+                        <img src="src/images/kaushik Video.png" alt="Kaushik Video" class="w-full rounded-3xl md-rounded-60px">
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-16 md-py-24 relative">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8">
+                <h2 class="text-3xl md-text-4xl font-karma font-bold text-center mb-16 md-mb-24">
+                    About Me
+                </h2>
+
+                <div class="grid grid-cols-1 lg-grid-cols-3 gap-12 lg-gap-16 mb-16">
+                    <div class="lg-col-span-2 space-y-8">
+                        <h3 class="text-xl font-inter font-bold italic text-center">
+                            SUMMARY
+                        </h3>
+                        <p class="text-base font-inter font-semibold leading-relaxed">
+                            I'm Kaushik Pathak, an operations specialist @SpringWorks with a
+                            Master of Computer Applications degree, who is passionate about
+                            transforming ideas into useful solutions. I enjoy working on
+                            projects that improve the speed and intelligence of processes,
+                            and I do best in a collaborative environment where creativity
+                            and efficiency coexist.
+                            <br />
+                            <br />
+                            Driven by technology and problem-solving, I concentrate on
+                            creating tools and systems with real-world impact. By combining
+                            professional experience with continuous learning and a tech
+                            education background, I strive to grow, adapt, and deliver
+                            solutions that make work easier and produce significant
+                            outcomes.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <span class="text-lg font-inter font-bold italic">
+                                Core Skills
+                            </span>
+                            <span class="text-base font-inter italic font-medium lowercase">
+                                Python, C++, HTML, CSS, JavaScript (Basic), SQL
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8 text-right">
+                        <div>
+                            <div class="text-4xl md-text-5xl font-inter font-bold">
+                                1+
+                            </div>
+                            <div class="text-base font-inter font-semibold">
+                                Years of Experience
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-4xl md-text-5xl font-inter font-bold">
+                                100+
+                            </div>
+                            <div class="text-base font-inter font-semibold">
+                                Hours Of Code
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-4xl md-text-5xl font-inter font-bold">
+                                45+
+                            </div>
+                            <div class="text-base font-inter font-semibold">
+                                Problem Solved
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="space-y-16">
+                    <h3 class="text-xl font-inter font-bold italic uppercase text-center">
+                        Work Experience
+                    </h3>
+
+                    <div class="space-y-20">
+                        <!-- SpringWorks -->
+                        <div class="relative">
+                            <div class="grid grid-cols-1 lg-grid-cols-2 gap-8 lg-gap-16">
+                                <div class="space-y-4">
+                                    <h4 class="text-base font-inter font-bold">
+                                        SPRINGWORKS | BENGULURU (Remote)
+                                    </h4>
+                                    <p class="text-sm font-inter italic">
+                                        DEC 24 - Present
+                                    </p>
+                                    <div class="h-64 lg-h-80 rounded-3xl bg-white overflow-hidden">
+                                        <img src alt="SpringWorks" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <div class="space-y-8">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-3 h-3 rounded-full bg-portfolio-dark-secondary"></div>
+                                        <h5 class="text-base font-inter font-bold">
+                                            Operation Specialist 1
+                                        </h5>
+                                        <span class="text-sm font-inter italic ml-auto">
+                                            JUN 25 - Present
+                                        </span>
+                                    </div>
+                                    <p class="text-base font-inter font-semibold leading-relaxed">
+                                        Led end-to-end <strong>work allocation</strong> and
+                                        <strong>TAT follow-ups</strong>, ensuring seamless task
+                                        distribution and on-time delivery across teams and
+                                        vendors. Automated <strong>bulk follow-up emails</strong>,
+                                        improving <strong>communication efficiency</strong> and
+                                        <strong>reducing manual effort by over 65%</strong>. Acted
+                                        as the primary escalation point for team queries and
+                                        vendor coordination, driving faster resolutions and
+                                        smoother operations. Collaborated with cross-functional
+                                        teams to streamline
+                                        <strong>
+                                            workflows, optimize task management, and maintain
+                                            high-quality operational standards
+                                        </strong>
+                                        .
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="absolute top-0 bottom-0 left-1/2 w-px bg-portfolio-dark hidden lg-block"></div>
+                        </div>
+
+                        <div class="relative">
+                            <div class="grid grid-cols-1 lg-grid-cols-2 gap-8 lg-gap-16">
+                                <div class="space-y-8 lg-order-2">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-3 h-3 rounded-full bg-portfolio-dark-secondary"></div>
+                                        <h5 class="text-base font-inter font-bold">
+                                            Operation Intern
+                                        </h5>
+                                        <span class="text-sm font-inter italic ml-auto">
+                                            DEC 24 - MAY 25
+                                        </span>
+                                    </div>
+                                    <p class="text-base font-inter font-semibold leading-relaxed">
+                                        Collaborated with internal teams and third-party vendors
+                                        to <strong>accelerate verification checks</strong> and
+                                        <strong>
+                                            resolve discrepancies efficiently. Maintained and
+                                            updated status dashboards
+                                        </strong>
+                                        , providing
+                                        <strong>
+                                            enhanced transparency into verification pipelines
+                                        </strong>
+                                        and turnaround times.
+                                        <strong>Reducing delays by 24%</strong> while maintaining
+                                        minimal errors. Leveraged tools such as
+                                        <strong>Google Sheets</strong>,
+                                        <strong>Trello, and official email</strong> to streamline
+                                        operations and ensure efficiency.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gulf Time Media -->
+                        <div class="relative">
+                            <div class="grid grid-cols-1 lg-grid-cols-2 gap-8 lg-gap-16">
+                                <div class="space-y-4">
+                                    <h4 class="text-base font-inter font-bold">
+                                        GULF TIME MEDIA | Dubai (Remote)
+                                    </h4>
+                                    <p class="text-sm font-inter italic">MAR 22 - APR 23</p>
+                                    <div class="h-64 lg-h-80 rounded-3xl bg-white overflow-hidden">
+                                        <img src alt="Gulf Time Media" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <div class="space-y-8">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-3 h-3 rounded-full bg-portfolio-dark-secondary"></div>
+                                        <h5 class="text-base font-inter font-bold">
+                                            Video Editor Intern | Freelance
+                                        </h5>
+                                        <span class="text-sm font-inter italic ml-auto">
+                                            MAR 22 - APR 23
+                                        </span>
+                                    </div>
+                                    <p class="text-base font-inter  font-semibold leading-relaxed">
+                                        Conducted <strong>post-production tasks</strong>, including <strong>sound design, video editing, and color correction</strong>. Produced and <strong>delivered projects within tight deadlines</strong>
+                                        while maintaining <strong>high production standards</strong>. Created <strong>10+ full-length videos</strong>, increasing consumer <strong>reach by 42%</strong>. Skilled in <strong>color correction,</strong> and online content
+                                        distribution to optimize viewer engagement. Collaborated with team members to ensure <strong>cohesive storytelling and consistent quality</strong> across all video projects.    
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WishFin -->
+                        <div class="relative">
+                            <div class="grid grid-cols-1 lg-grid-cols-2 gap-8 lg-gap-16">
+                                <div class="space-y-4">
+                                    <h4 class="text-base font-inter font-bold">
+                                        WishFIn | Jaipur
+                                    </h4>
+                                    <p class="text-sm font-inter italic">SEP 21 - JAN 22</p>
+                                    <div class="h-64 lg-h-80 rounded-3xl bg-white overflow-hidden">
+                                        <img src="" alt="WishFin" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <div class="space-y-8">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-3 h-3 rounded-full bg-portfolio-dark-secondary"></div>
+                                        <h5 class="text-base font-inter font-bold">
+                                            Assistant Relationship Officer
+                                        </h5>
+                                        <span class="text-sm font-inter italic ml-auto">
+                                            SEP 21 - JAN 22
+                                        </span>
+                                    </div>
+                                    <p class="text-base font-inter font-semibold leading-relaxed">
+                                        Achieved an average <strong>monthly sales increase of up to 17%</strong>{" "}
+                                        across SCB, Axis, and SBI. <strong>Utilized CRM software</strong> to track customer
+                                        interactions, maintain records, and optimize workflows. Applied <strong>negotiation and persuasive techniques</strong> to
+                                        convert potential leads into confirmed sales. <strong>Consistently met and exceeded sales targets</strong>, contributing to overall company growth. Maintained
+                                        <strong>strong client relationships</strong> to ensure repeat business and long-term engagement.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="py-16 md-py-24 bg-portfolio-purple text-white relative">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute -bottom-1/2 left-1/2 transform -translate-x-1/2 w-200% h-150% rounded-t-full bg-portfolio-green-pale"></div>
+            </div>
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8 relative z-10">
+                <h2 class="text-xl font-inter font-bold uppercase text-center mb-16 md-mb-24">
+                    Education
+                </h2>
+
+                <div class="grid grid-cols-1 lg-grid-cols-2 gap-12 lg-gap-16">
+                    <!-- LPU -->
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-inter font-bold">
+                            LOVELY PROFESSIONAL UNIVERSITY
+                        </h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="col-span-2 h-48 rounded-3xl bg-gray-300 overflow-hidden">
+                                <img src="" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="h-32 rounded-3xl bg-gray-300 overflow-hidden">
+                                <img src="" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="h-32 rounded-3xl bg-gray-300 overflow-hidden">
+                                <img src="" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="h-24 rounded-3xl bg-gray-300 overflow-hidden">
+                                <img src="" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="h-24 rounded-3xl bg-gray-300 overflow-hidden">
+                                <img src="" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="col-span-2 h-32 rounded-3xl bg-gray-300 overflow-hidden">
+                                <img src="" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="col-span-2 h-32 rounded-3xl bg-gray-300 overflow-hidden">
+                                <img src="" alt="" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MCA -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-3 h-3 rounded-full bg-white"></div>
+                            <h4 class="text-base font-inter font-bold">
+                                Masters in Computer Application
+                            </h4>
+                            <span class="text-sm font-inter italic ml-auto">
+                                AUG 23 - JUL 25
+                            </span>
+                        </div>
+                        <div class="space-y-4">
+                            <p class="text-base font-inter leading-relaxed">
+                                During my two years pursuing my Master's of Computer
+                                Application, I gained knowledge of programming, data
+                                structures, database management, and software development. I
+                                further honed my technical skills and problem-solving
+                                abilities through hands-on projects and real-world
+                                applications.
+                            </p>
+                            <p class="text-base font-inter leading-relaxed">
+                                Developed hands-on skills in C++,Python and its frameworks, R,
+                                SQL, and data analysis through practical projects and
+                                assignments. Built workflow automation tools, small-scale
+                                applications, and data-driven solutions to solve real-world
+                                problems. Strengthened critical thinking, problem-solving, and
+                                collaboration skills through team projects and academic
+                                challenges. Learned to deliver results under deadlines,
+                                preparing for professional roles in operations, technology,
+                                and digital solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BSC -->
+                    <div class="lg-col-start-2 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-3 h-3 rounded-full bg-white"></div>
+                            <h4 class="text-base font-inter font-bold">
+                                Bachelors of Science
+                            </h4>
+                            <span class="text-sm font-inter italic ml-auto">
+                                JUL 19 - JUL 22
+                            </span>
+                        </div>
+                        <p class="text-base font-inter leading-relaxed">
+                            During my Bachelor of Science specialized in{" "}
+                            <strong>Information Technology</strong>, I learnt a solid
+                            foundation in programming, database management, and software
+                            fundamentals.
+                            <br />
+                            <br />I actively participated in workshops, events, and
+                            collaborative projects, applying my skills to enhance my
+                            communication and collaborative skills. These experiences
+                            strengthened my teamwork, problem-solving, and hands-on
+                            technical abilities, preparing me for professional growth and
+                            advanced learning.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 md-py-24 relative">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8">
+                <h2 class="text-3xl md-text-4xl font-karma font-bold text-center mb-16">
+                    Skills
+                </h2>
+
+                <div class="bg-gray-100 rounded-t-50px p-8 md-p-12">
+                    <div class="grid grid-cols-1 md-grid-cols-3 gap-12 md-gap-16">
+                        <!-- Creative -->
+                        <div class="space-y-8 text-center">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="src/images/Creative.png" alt="Creative" class="h-12">
+                                <h3 class="text-xl font-karma font-bold">Creative</h3>
+                            </div>
+                            <p class="text-xl font-karma font-bold leading-snug">
+                                I love turning ideas into innovative solutions, combining
+                                creativity with technology to make an impact.
+                            </p>
+                            <div>
+                                <h4 class="text-xl font-karma font-bold text-portfolio-orange mb-2">
+                                    I Love Creating
+                                </h4>
+                                <p class="text-xl font-karma font-bold">
+                                    Video, Visual, Music and Design
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-karma font-bold text-portfolio-orange mb-2">
+                                    Tools
+                                </h4>
+                                <div class="space-y-1">
+                                    <p class="text-xl font-karma font-bold">Premiere Pro</p>
+                                    <p class="text-xl font-karma font-bold">
+                                        DaVinci Resolve
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">
+                                        Adobe Photoshop
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">FL Studio</p>
+                                    <p class="text-xl font-karma font-bold">Figma</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical -->
+                        <div class="space-y-8 text-center">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="src/images/Technical.png" alt="Technical" class="h-16">
+                                <h3 class="text-xl font-karma font-bold">Technical</h3>
+                            </div>
+                            <p class="text-xl font-karma font-bold leading-relaxed">
+                                I like combining my technical knowledge with problem-solving
+                                to develop effective impact solutions.
+                            </p>
+                            <div>
+                                <h4 class="text-xl font-karma font-bold text-portfolio-orange mb-2">
+                                    Language
+                                </h4>
+                                <p class="text-xl font-karma font-bold">
+                                    Python, C++, JavaScript (Basic), SQL
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-karma font-bold text-portfolio-orange mb-2">
+                                    Technologies/Tools
+                                </h4>
+                                <div class="space-y-1">
+                                    <p class="text-xl font-karma font-bold">HTML, CSS</p>
+                                    <p class="text-xl font-karma font-bold">
+                                        JavaScript and its framework
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">
+                                        Python Framework
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">
+                                        MySQL, SQL Server Management Studio
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">RestAPI</p>
+                                    <p class="text-xl font-karma font-bold">
+                                        Manual and Automation Testing
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">
+                                        Excel, Google Sheets
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">Git/GitHub</p>
+                                    <p class="text-xl font-karma font-bold">
+                                        Machine Learning
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">CI/CD</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Collaborative -->
+                        <div class="space-y-8 text-center">
+                            <div class="flex flex-col items-center gap-4">
+                                <img src="src/images/Collabrative.png" alt="Collaborative" class="h-16">
+                                <h3 class="text-xl font-karma font-bold">
+                                    Collaborative
+                                </h3>
+                            </div>
+                            <p class="text-xl font-karma font-bold leading-snug">
+                                I value clear communication and teamwork to achieve goals
+                                efficiently and creatively
+                            </p>
+                            <div>
+                                <h4 class="text-xl font-karma font-bold text-portfolio-orange mb-2">
+                                    Teamwork-Driven
+                                </h4>
+                                <p class="text-xl font-karma font-bold">
+                                    Collaboration and Communication
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-karma font-bold text-portfolio-orange mb-2">
+                                    People Skills
+                                </h4>
+                                <div class="space-y-1">
+                                    <p class="text-xl font-karma font-bold">Teamplayer</p>
+                                    <p class="text-xl font-karma font-bold">
+                                        Communication & Presentation
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">
+                                        Planning & Execution
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">
+                                        Problem-Solving
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">
+                                        Management & Leadership
+                                    </p>
+                                    <p class="text-xl font-karma font-bold">Coordination</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 md-py-24">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8">
+                <h2 class="text-3xl md-text-4xl font-karma font-bold text-center mb-16 text-portfolio-dark-secondary">
+                    Projects
+                </h2>
+
+                <div class="grid grid-cols-1 md-grid-cols-2 lg-grid-cols-3 gap-4 md-gap-6">
+                    <div class="project-card">
+                        <div class="space-y-2">
+                            <div class="h-32 rounded-3xl bg-portfolio-green blur-3xl"></div>
+                            <h3 class="text-xl font-inter font-bold uppercase">
+                                Lorem ipsum mollis
+                            </h3>
+                        </div>
+                        <p class="text-base font-inter font-semibold leading-relaxed">
+                            Lorem ipsum curabitur vitae sed et diam dui faucibus malesuada
+                            ipsum erat fusce dui eu leo elementum at hendrerit mollis vel
+                            tellus nec massa diam nunc commodo tellus consequat suscipit
+                            aliquam amet cursus in dignissim lorem integer mi euismod
+                            pulvinar purus viverra et sit at ultricies leo porta imperdiet
+                            tortor turpis proin euismod tellus in.
+                        </p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://via.placeholder.com/20x20/3E5F44/FFFFFF?text=🌐" alt="Website" class="w-5 h-5">
+                            <img src="https://via.placeholder.com/28x28/3E5F44/FFFFFF?text=📁" alt="GitHub" class="w-7 h-7">
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="space-y-2">
+                            <div class="h-32 rounded-3xl bg-portfolio-green blur-3xl"></div>
+                            <h3 class="text-xl font-inter font-bold uppercase">
+                                Lorem ipsum mollis
+                            </h3>
+                        </div>
+                        <p class="text-base font-inter font-semibold leading-relaxed">
+                            Lorem ipsum curabitur vitae sed et diam dui faucibus malesuada
+                            ipsum erat fusce dui eu leo elementum at hendrerit mollis vel
+                            tellus nec massa diam nunc commodo tellus consequat suscipit
+                            aliquam amet cursus in dignissim lorem integer mi euismod
+                            pulvinar purus viverra et sit at ultricies leo porta imperdiet
+                            tortor turpis proin euismod tellus in.
+                        </p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://via.placeholder.com/20x20/3E5F44/FFFFFF?text=🌐" alt="Website" class="w-5 h-5">
+                            <img src="https://via.placeholder.com/28x28/3E5F44/FFFFFF?text=📁" alt="GitHub" class="w-7 h-7">
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="space-y-2">
+                            <div class="h-32 rounded-3xl bg-portfolio-green blur-3xl"></div>
+                            <h3 class="text-xl font-inter font-bold uppercase">
+                                Lorem ipsum mollis
+                            </h3>
+                        </div>
+                        <p class="text-base font-inter font-semibold leading-relaxed">
+                            Lorem ipsum curabitur vitae sed et diam dui faucibus malesuada
+                            ipsum erat fusce dui eu leo elementum at hendrerit mollis vel
+                            tellus nec massa diam nunc commodo tellus consequat suscipit
+                            aliquam amet cursus in dignissim lorem integer mi euismod
+                            pulvinar purus viverra et sit at ultricies leo porta imperdiet
+                            tortor turpis proin euismod tellus in.
+                        </p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://via.placeholder.com/20x20/3E5F44/FFFFFF?text=🌐" alt="Website" class="w-5 h-5">
+                            <img src="https://via.placeholder.com/28x28/3E5F44/FFFFFF?text=📁" alt="GitHub" class="w-7 h-7">
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="space-y-2">
+                            <div class="h-32 rounded-3xl bg-portfolio-green blur-3xl"></div>
+                            <h3 class="text-xl font-inter font-bold uppercase">
+                                Lorem ipsum mollis
+                            </h3>
+                        </div>
+                        <p class="text-base font-inter font-semibold leading-relaxed">
+                            Lorem ipsum curabitur vitae sed et diam dui faucibus malesuada
+                            ipsum erat fusce dui eu leo elementum at hendrerit mollis vel
+                            tellus nec massa diam nunc commodo tellus consequat suscipit
+                            aliquam amet cursus in dignissim lorem integer mi euismod
+                            pulvinar purus viverra et sit at ultricies leo porta imperdiet
+                            tortor turpis proin euismod tellus in.
+                        </p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://via.placeholder.com/20x20/3E5F44/FFFFFF?text=🌐" alt="Website" class="w-5 h-5">
+                            <img src="https://via.placeholder.com/28x28/3E5F44/FFFFFF?text=📁" alt="GitHub" class="w-7 h-7">
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="space-y-2">
+                            <div class="h-32 rounded-3xl bg-portfolio-green blur-3xl"></div>
+                            <h3 class="text-xl font-inter font-bold uppercase">
+                                Lorem ipsum mollis
+                            </h3>
+                        </div>
+                        <p class="text-base font-inter font-semibold leading-relaxed">
+                            Lorem ipsum curabitur vitae sed et diam dui faucibus malesuada
+                            ipsum erat fusce dui eu leo elementum at hendrerit mollis vel
+                            tellus nec massa diam nunc commodo tellus consequat suscipit
+                            aliquam amet cursus in dignissim lorem integer mi euismod
+                            pulvinar purus viverra et sit at ultricies leo porta imperdiet
+                            tortor turpis proin euismod tellus in.
+                        </p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://via.placeholder.com/20x20/3E5F44/FFFFFF?text=🌐" alt="Website" class="w-5 h-5">
+                            <img src="https://via.placeholder.com/28x28/3E5F44/FFFFFF?text=📁" alt="GitHub" class="w-7 h-7">
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="space-y-2">
+                            <div class="h-32 rounded-3xl bg-portfolio-green blur-3xl"></div>
+                            <h3 class="text-xl font-inter font-bold uppercase">
+                                Lorem ipsum mollis
+                            </h3>
+                        </div>
+                        <p class="text-base font-inter font-semibold leading-relaxed">
+                            Lorem ipsum curabitur vitae sed et diam dui faucibus malesuada
+                            ipsum erat fusce dui eu leo elementum at hendrerit mollis vel
+                            tellus nec massa diam nunc commodo tellus consequat suscipit
+                            aliquam amet cursus in dignissim lorem integer mi euismod
+                            pulvinar purus viverra et sit at ultricies leo porta imperdiet
+                            tortor turpis proin euismod tellus in.
+                        </p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://via.placeholder.com/20x20/3E5F44/FFFFFF?text=🌐" alt="Website" class="w-5 h-5">
+                            <img src="https://via.placeholder.com/28x28/3E5F44/FFFFFF?text=📁" alt="GitHub" class="w-7 h-7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="py-16 md-py-24">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8">
+                <h2 class="text-3xl md-text-4xl font-karma font-bold text-center mb-16 text-portfolio-dark-secondary">
+                    Licenses & certifications
+                </h2>
+
+                <div class="space-y-6">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-portfolio-purple-light flex-shrink-0"></div>
+                        <div class="flex-1 space-y-1">
+                            <div class="flex flex-wrap items-start justify-between gap-4">
+                                <h3 class="text-base font-inter font-bold">
+                                    Machine Learning Specilization
+                                </h3>
+                                <span class="text-base font-inter italic">
+                                    Issued AUG 2024
+                                </span>
+                            </div>
+                            <p class="text-base font-inter italic">Coursera Certificates</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-portfolio-purple-light flex-shrink-0"></div>
+                        <div class="flex-1 space-y-1">
+                            <div class="flex flex-wrap items-start justify-between gap-4">
+                                <h3 class="text-base font-inter font-bold">
+                                    100 Days of Code: The Complete Python Pro Bootcamp for 2022
+                                </h3>
+                                <span class="text-base font-inter italic">
+                                    Issued AUG 2022
+                                </span>
+                            </div>
+                            <p class="text-base font-inter italic">Udemy Certificates</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-portfolio-purple-light flex-shrink-0"></div>
+                        <div class="flex-1 space-y-1">
+                            <div class="flex flex-wrap items-start justify-between gap-4">
+                                <h3 class="text-base font-inter font-bold">
+                                    R Programming
+                                </h3>
+                                <span class="text-base font-inter italic">
+                                    Issued JUN 2021
+                                </span>
+                            </div>
+                            <p class="text-base font-inter italic">Coursera Certificates</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-portfolio-purple-light flex-shrink-0"></div>
+                        <div class="flex-1 space-y-1">
+                            <div class="flex flex-wrap items-start justify-between gap-4">
+                                <h3 class="text-base font-inter font-bold">
+                                    Full Stack Development using MERN
+                                </h3>
+                                <span class="text-base font-inter italic">
+                                    Issued OCT 2020
+                                </span>
+                            </div>
+                            <p class="text-base font-inter italic">Lovely Professional University Certificates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Motivational Quote Section -->
+        <section class="py-16 md-py-24">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8 text-center space-y-2">
+                <h3 class="text-xl font-pacifico">Well, With That Being Said</h3>
+                <p class="text-base font-outfit opacity-75">
+                    'These are the thoughts that inspire me, the words I live by, and
+                    the lines that define me.'
+                </p>
+            </div>
+        </section>
+
+        <!-- Carousel Section -->
+        <section class="py-16 md-py-24 carousel-section">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8">
+                <div class="space-y-8 text-center">
+                    <div class="w-16 h-16 rounded-full mx-auto bg-gray-300 overflow-hidden">
+                        <img src="src/images/david gogings.jpeg" alt="David Goggins" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-2xl font-pacifico leading-relaxed max-w-2xl mx-auto">
+                        "when your mind tells you that you are done, you've only reached
+                        about 40% of your true physical and mental capacity"
+                    </p>
+                    <div>
+                        <h4 class="text-base font-inter font-bold uppercase">
+                            David Goggins
+                        </h4>
+                        <p class="text-sm font-inter font-semibold opacity-60">
+                            Speaker and Author
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center gap-6">
+                        <button class="carousel-dot active" onclick="setActiveSlide(0)"></button>
+                        <button class="carousel-dot" onclick="setActiveSlide(1)"></button>
+                        <button class="carousel-dot" onclick="setActiveSlide(2)"></button>
+                        <button class="carousel-dot" onclick="setActiveSlide(3)"></button>
+                        <button class="carousel-dot" onclick="setActiveSlide(4)"></button>
+                        <button class="carousel-dot" onclick="setActiveSlide(5)"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-portfolio-green-dark text-white py-12">
+            <div class="max-w-screen-lg mx-auto px-4 sm-px-6 lg-px-8">
+                <div class="flex flex-col md-flex-row justify-between items-center gap-6">
+                    <p class="text-base font-inter italic">© 2025 pkaushik.in</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="social-link">
+                            <img src="src/icons/github.png" alt="GitHub" class="w-8 h-8 rounded-full object-cover">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="src/icons/linkedin.webp" alt="LinkedIn" class="w-8 h-8 rounded-full object-cover">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="src/icons/email.png" alt="Email" class="w-8 h-8 rounded-full object-cover">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
