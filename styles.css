@@ -1125,7 +1125,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0;
     cursor: pointer;
     padding: 0;
-    box-shadow: 0 6px 20px rgba(62, 95, 68, 0.4);
+    /* box-shadow: 0 6px 20px rgba(62, 95, 68, 0.4); */
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -1146,13 +1146,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-menu-btn:hover {
     transform: rotate(180deg) scale(1.1);
-    box-shadow: 0 12px 35px rgba(62, 95, 68, 0.6);
 }
 
 .mobile-menu-btn span {
     width: 20px;
     height: 2px;
-    background-color: var(--portfolio-green-dark);
+    background-color: #222;
     border-radius: 2px;
     transition: all 0.3s ease;
     margin: 2px 0;
@@ -1163,7 +1162,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-menu-btn.active span {
-    background-color: var(--portfolio-green-dark);
+    background-color: #222;
 }
 
 .mobile-menu-btn.active span:nth-child(1) {
