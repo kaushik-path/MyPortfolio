@@ -415,7 +415,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all features
     highlightNavigationOnScroll();
     addProjectCardEffects();
-    addMobileMenuToggle();
     addScrollAnimations();
     addButtonEffects();
     addRippleCSS();
