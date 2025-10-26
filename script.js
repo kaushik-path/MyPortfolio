@@ -416,16 +416,62 @@ function animateCounter(elementId, targetValue) {
     if (!element) return;
     
     let current = 0;
-    const increment = targetValue / 75;
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= targetValue) {
-            element.textContent = targetValue;
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current);
-        }
-    }, 40);
+    
+    if (elementId === 'counter-1') {
+        const duration = 2000; // 2 seconds
+        const steps = 10; // 10 steps (0.1, 0.2, ... 1.0)
+        const increment = targetValue / steps;
+        const stepDuration = duration / steps;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= targetValue) {
+                element.textContent = targetValue;
+                clearInterval(timer);
+            } else {
+                element.textContent = current.toFixed(1);
+            }
+        }, stepDuration);
+    } else {
+        const increment = targetValue / 50;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= targetValue) {
+                element.textContent = targetValue;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current);
+            }
+        }, 30);
+    }
+}
+
+// Check if counters are in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Start counter animation
+function startCounterAnimation() {
+    const aboutSection = document.getElementById('about');
+    if (!aboutSection) return;
+    
+    const rect = aboutSection.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+    
+    if (isVisible) {
+        animateCounter('counter-1', 1.0);
+        animateCounter('counter-100', 100);
+        animateCounter('counter-45', 45);
+        return true;
+    }
+    return false;
 }
 
 // Initialize all functionality when DOM is loaded
@@ -441,18 +487,33 @@ document.addEventListener('DOMContentLoaded', function() {
     setActiveSlide(0);
     
     // Start counter animations when about section is visible
+    let counterAnimated = false;
+    
+    function checkCounters() {
+        if (!counterAnimated && startCounterAnimation()) {
+            counterAnimated = true;
+        }
+    }
+    
+    // Check on scroll and resize
+    window.addEventListener('scroll', checkCounters);
+    window.addEventListener('resize', checkCounters);
+    
+    // Initial check
+    checkCounters();
+    
+    // Fallback with Intersection Observer for better browser support
     const aboutSection = document.getElementById('about');
-    if (aboutSection) {
+    if (aboutSection && 'IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter('counter-1', 1);
-                    animateCounter('counter-100', 100);
-                    animateCounter('counter-45', 45);
+                if (entry.isIntersecting && !counterAnimated) {
+                    startCounterAnimation();
+                    counterAnimated = true;
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.1, rootMargin: '50px' });
         
         observer.observe(aboutSection);
     }

@@ -1149,6 +1149,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-menu-btn span {
+    display: block;
     width: 20px;
     height: 2px;
     background-color: #000000;
