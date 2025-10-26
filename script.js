@@ -410,6 +410,24 @@ function addRippleCSS() {
     document.head.appendChild(style);
 }
 
+// Counter animation function
+function animateCounter(elementId, targetValue) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+    
+    let current = 0;
+    const increment = targetValue / 75;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= targetValue) {
+            element.textContent = targetValue;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 40);
+}
+
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all features
@@ -422,11 +440,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize carousel
     setActiveSlide(0);
     
-    // Optional: Start auto-rotating carousel
-    // startCarousel();
-    
-    // Optional: Add typing effect
-    // addTypingEffect();
+    // Start counter animations when about section is visible
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter('counter-1', 1);
+                    animateCounter('counter-100', 100);
+                    animateCounter('counter-45', 45);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        observer.observe(aboutSection);
+    }
     
     console.log('Portfolio loaded successfully!');
 });
