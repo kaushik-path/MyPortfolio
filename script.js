@@ -1,7 +1,6 @@
 
 
 // Hero section typing effect
-
 const phrases = [
   { first: "Kaushik", last: "Pathak" },
   { first: "Data", last: "Enthusiast" },
@@ -76,8 +75,7 @@ function typeEffect() {
 }
 
 typeEffect();
-
-
+   
 
 
 // Smooth scrolling function
@@ -88,6 +86,16 @@ function scrollToSection(sectionId) {
             behavior: 'smooth',
             block: 'start'
         });
+    }
+}
+
+// Mobile menu toggle function
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    if (mobileMenu) {
+        mobileMenu.classList.toggle('active');
+        menuBtn.classList.toggle('active');
     }
 }
 

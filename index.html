@@ -25,6 +25,17 @@
                         <button onclick="scrollToSection('skills')" class="nav-link">Skills</button>
                         <button onclick="scrollToSection('projects')" class="nav-link">Project</button>
                     </div>
+                    <button class="md-hidden mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="mobile-menu">
+                    <button onclick="scrollToSection('home'); toggleMobileMenu();" class="mobile-nav-link">Home</button>
+                    <button onclick="scrollToSection('about'); toggleMobileMenu();" class="mobile-nav-link">About</button>
+                    <button onclick="scrollToSection('skills'); toggleMobileMenu();" class="mobile-nav-link">Skills</button>
+                    <button onclick="scrollToSection('projects'); toggleMobileMenu();" class="mobile-nav-link">Project</button>
                 </div>
             </div>
         </nav>
